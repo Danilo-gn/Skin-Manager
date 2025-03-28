@@ -60,8 +60,14 @@ function App() {
     return `${bundleName} ${weaponName}`;
   };
 
+  
+  const randomIndex = Math.floor(Math.random() * bundles.length);
+  const randomItem = bundles[randomIndex];
+  
+    
+
   const fundoBundle = bundles.find((bundle) => bundle.uuid === selectedBundle)?.displayIcon ||
-  './public/valorantbg.jpg';
+  randomItem.displayIcon;
 
   const wallpaper = `url(${fundoBundle})`;
 
