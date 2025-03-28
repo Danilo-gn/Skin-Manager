@@ -29,7 +29,6 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
   const [selectedBundle, setSelectedBundle] = useState<string>('');
-  const [selectedWeapon, setSelectedWeapon] = useState<string>('');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -55,10 +54,6 @@ function App() {
 
   const handleBundleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedBundle(event.target.value);
-  };
-
-  const handleWeaponChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectedWeapon(event.target.value);
   };
 
   const combineNames = (bundleName: string, weaponName: string): string => {
