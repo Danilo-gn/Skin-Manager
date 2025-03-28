@@ -61,7 +61,7 @@ function App() {
   };
 
   const fundoBundle = bundles.find((bundle) => bundle.uuid === selectedBundle)?.displayIcon ||
-  '';
+  './public/valorantbg.jpg';
 
   const wallpaper = `url(${fundoBundle})`;
 
